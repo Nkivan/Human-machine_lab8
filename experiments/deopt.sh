@@ -1,0 +1,2 @@
+# bash experiments/deopt.sh : watch V8 optimize add() and then deoptimize it when it sees strings
+node --allow-natives-syntax -e "function add(a,b){return a+b}; for(let i=0;i<1e6;i++) add(i,1); %OptimizeFunctionOnNextCall(add); add(1,2); console.log('after ints:   ', (%GetOptimizationStatus(add)).toString(2).padStart(18,'0')); add('a','b'); console.log('after strings:', (%GetOptimizationStatus(add)).toString(2).padStart(18,'0'))"

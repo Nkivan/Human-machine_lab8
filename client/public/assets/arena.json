@@ -1,0 +1,6 @@
+{
+  "name": "Default",
+  "asteroids": 6,
+  "pickupEvery": 8,
+  "seed": 12345
+}

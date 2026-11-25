@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#05070d" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>Dogfight — Multiplayer Arena</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #05070d;
+        overflow: hidden;
+        font-family: system-ui, sans-serif;
+      }
+      canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+      .lobby {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        color: #e6edf7;
+        background: rgba(5, 7, 13, 0.92);
+      }
+      .lobby h1 {
+        margin: 0;
+        letter-spacing: 2px;
+      }
+      .lobby input {
+        padding: 8px 10px;
+        border-radius: 6px;
+        border: 1px solid #2c3e6b;
+        background: #0a0f1c;
+        color: inherit;
+      }
+      .lobby ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: min(420px, 90vw);
+      }
+      .lobby li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+        border: 1px solid #16203a;
+        border-radius: 8px;
+        background: #0a0f1c;
+      }
+      .lobby button {
+        padding: 6px 14px;
+        border-radius: 6px;
+        border: 0;
+        background: #3b6cff;
+        color: #fff;
+        cursor: pointer;
+      }
+      .lobby button:disabled {
+        background: #2a3350;
+        color: #7d88a8;
+        cursor: not-allowed;
+      }
+      .lobby .status {
+        font-size: 12px;
+        color: #7d88a8;
+        min-height: 1em;
+      }
+      .chat {
+        position: fixed;
+        left: 12px;
+        bottom: 12px;
+        width: min(360px, 80vw);
+        color: #e6edf7;
+        font:
+          13px ui-monospace,
+          monospace;
+        pointer-events: none;
+      }
+      .chat-status {
+        color: #7d88a8;
+      }
+      .chat-roster {
+        color: #9be28f;
+        margin-bottom: 6px;
+      }
+      .chat-log div {
+        padding: 1px 0;
+        text-shadow: 0 0 4px #000;
+      }
+      .chat-log .sys {
+        color: #7d88a8;
+      }
+      .chat input {
+        pointer-events: auto;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 6px;
+        padding: 6px 8px;
+        border-radius: 6px;
+        border: 1px solid #2c3e6b;
+        background: rgba(10, 15, 28, 0.85);
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

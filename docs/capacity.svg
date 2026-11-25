@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="system-ui, sans-serif" font-size="12">
+<rect width="760" height="430" fill="#fcfcfb"/>
+<text x="60" y="24" font-size="15" font-weight="600" fill="#1f1f1d">Server tick p99 vs. clients in one room</text>
+<line x1="60" x2="590" y1="360" y2="360" stroke="#e4e3df"/>
+<text x="52" y="364" text-anchor="end" fill="#6b6a64">0</text>
+<line x1="60" x2="590" y1="291.1111111111111" y2="291.1111111111111" stroke="#e4e3df"/>
+<text x="52" y="295.1111111111111" text-anchor="end" fill="#6b6a64">10</text>
+<line x1="60" x2="590" y1="222.22222222222223" y2="222.22222222222223" stroke="#e4e3df"/>
+<text x="52" y="226.22222222222223" text-anchor="end" fill="#6b6a64">20</text>
+<line x1="60" x2="590" y1="153.33333333333334" y2="153.33333333333334" stroke="#e4e3df"/>
+<text x="52" y="157.33333333333334" text-anchor="end" fill="#6b6a64">30</text>
+<line x1="60" x2="590" y1="84.44444444444446" y2="84.44444444444446" stroke="#e4e3df"/>
+<text x="52" y="88.44444444444446" text-anchor="end" fill="#6b6a64">40</text>
+<text x="60" y="378" text-anchor="middle" fill="#6b6a64">0</text>
+<text x="166" y="378" text-anchor="middle" fill="#6b6a64">128</text>
+<text x="272" y="378" text-anchor="middle" fill="#6b6a64">256</text>
+<text x="378" y="378" text-anchor="middle" fill="#6b6a64">384</text>
+<text x="484" y="378" text-anchor="middle" fill="#6b6a64">512</text>
+<text x="590" y="378" text-anchor="middle" fill="#6b6a64">640</text>
+<text x="325" y="396" text-anchor="middle" fill="#45443f">clients (N)</text>
+<text x="16" y="205" transform="rotate(-90 16 205)" text-anchor="middle" fill="#45443f">tick p99, ms</text>
+<line x1="60" x2="590" y1="130.60000000000002" y2="130.60000000000002" stroke="#6b6a64" stroke-dasharray="4 4"/>
+<text x="596" y="134.60000000000002" fill="#45443f">33.3 ms budget</text>
+<polyline points="66.625,340.7042222222222 86.5,329.66133333333335 113,299.8117777777778 166,238.914 219,169.63933333333335 272,81.90933333333334" fill="none" stroke="#2a78d6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="66.625" cy="340.7042222222222" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>before (Lab 6 server): N=8, p99 2.8 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="86.5" cy="329.66133333333335" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>before (Lab 6 server): N=32, p99 4.4 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="113" cy="299.8117777777778" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>before (Lab 6 server): N=64, p99 8.7 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="166" cy="238.914" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>before (Lab 6 server): N=128, p99 17.6 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="219" cy="169.63933333333335" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>before (Lab 6 server): N=192, p99 27.6 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="272" cy="81.90933333333334" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>before (Lab 6 server): N=256, p99 40.4 ms, 30.1 snapshots/s per client</title></circle>
+<line x1="219" x2="219" y1="50" y2="360" stroke="#2a78d6" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="223" y="62" fill="#45443f">capacity 192</text>
+<polyline points="66.625,352.56 86.5,347.93755555555555 113,330.07466666666664 166,291.26266666666663 219,259.65644444444445 272,203.0022222222222 378,210.6488888888889 431,141.7668888888889 484,184.36777777777777 590,151.30111111111108" fill="none" stroke="#eb6834" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="66.625" cy="352.56" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>after (Lab 7 fixes): N=8, p99 1.1 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="86.5" cy="347.93755555555555" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>after (Lab 7 fixes): N=32, p99 1.8 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="113" cy="330.07466666666664" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>after (Lab 7 fixes): N=64, p99 4.3 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="166" cy="291.26266666666663" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>after (Lab 7 fixes): N=128, p99 10.0 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="219" cy="259.65644444444445" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>after (Lab 7 fixes): N=192, p99 14.6 ms, 29.9 snapshots/s per client</title></circle>
+<circle cx="272" cy="203.0022222222222" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>after (Lab 7 fixes): N=256, p99 22.8 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="378" cy="210.6488888888889" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>after (Lab 7 fixes): N=384, p99 21.7 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="431" cy="141.7668888888889" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>after (Lab 7 fixes): N=448, p99 31.7 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="484" cy="184.36777777777777" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>after (Lab 7 fixes): N=512, p99 25.5 ms, 30.0 snapshots/s per client</title></circle>
+<circle cx="590" cy="151.30111111111108" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>after (Lab 7 fixes): N=640, p99 30.3 ms, 24.0 snapshots/s per client</title></circle>
+<line x1="484" x2="484" y1="50" y2="360" stroke="#eb6834" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="488" y="62" fill="#45443f">capacity 512</text>
+<line x1="596" x2="616" y1="90" y2="90" stroke="#2a78d6" stroke-width="2"/>
+<text x="622" y="94" fill="#1f1f1d">before (Lab 6 server)</text>
+<line x1="596" x2="616" y1="110" y2="110" stroke="#eb6834" stroke-width="2"/>
+<text x="622" y="114" fill="#1f1f1d">after (Lab 7 fixes)</text>
+<text x="60" y="422" fill="#6b6a64" font-size="11">After N=512 the tick is fine but each client gets only 24 of 30 snapshots/s (~300 MB/s send cap).</text>
+</svg>
